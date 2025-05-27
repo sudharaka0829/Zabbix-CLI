@@ -1,0 +1,42 @@
+ cat /root/.config/zabbix-cli/zabbix-cli.toml
+[api]
+url = "http://192.168.160.135/zabbix"
+username = "Admin"
+password = ""
+auth_token = "675d11d3d0b5961b92047ab11dc1f370c3cf3102e2743c4d75fd23cce315fc2f"
+verify_ssl = false
+
+[app]
+default_hostgroups = [
+    "All-hosts",
+]
+default_admin_usergroups = []
+default_create_user_usergroups = []
+default_notification_users_usergroups = [
+    "All-notification-users",
+]
+export_directory = "/root/.local/share/zabbix-cli/exports"
+export_format = "json"
+export_timestamps = false
+use_session_file = true
+session_file = "/root/.local/share/zabbix-cli/.zabbix-cli_session.json"
+auth_token_file = "/root/.local/share/zabbix-cli/.zabbix-cli_auth_token"
+auth_file = "/root/.local/share/zabbix-cli/.zabbix-cli_auth"
+allow_insecure_auth_file = true
+history = true
+history_file = "/root/.local/share/zabbix-cli/history"
+bulk_mode = "strict"
+legacy_json_format = false
+
+[app.commands.create_host]
+create_interface = true
+
+[app.output]
+format = "table"
+color = true
+paging = false
+
+[logging]
+enabled = true
+log_level = "INFO"
+log_file = "/root/.local/state/zabbix-cli/log/zabbix-cli.log"
