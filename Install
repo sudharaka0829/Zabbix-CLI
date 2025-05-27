@@ -1,5 +1,7 @@
 pip install zabbix-cli-uio
+pip install --no-index --find-links=/path/to/download-dir zabbix-cli-uio
 pip download zabbix-cli-uio -d /tmp/
+
 
 annotated_types-0.7.0-py3-none-any.whl
 anyio-4.9.0-py3-none-any.whl
